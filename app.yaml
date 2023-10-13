@@ -1,5 +1,5 @@
 runtime: java11
-entrypoint: 'java -cp * your.main.class'
+entrypoint: 'java -cp * index.class'
 api_version: 1
 threadsafe: true
 instance_class: F2
