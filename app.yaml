@@ -2,7 +2,9 @@ runtime: java11
 api_version: 1
 threadsafe: true
 instance_class: F2
-
+runtime_config:
+    operating_system: "ubuntu22"
+    runtime_version: "17"
 handlers:
 - url: /.*
  static_files: appdemo/index.html
