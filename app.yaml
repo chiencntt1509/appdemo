@@ -1,16 +1,17 @@
 runtime: java11
-entrypoint: 'java -cp * index.html'
+entrypoint: 'java -cp * your.main.class'
 api_version: 1
 threadsafe: true
 instance_class: F2
 runtime_config:
-    operating_system: "ubuntu22"
-    runtime_version: "17"
+  operating_system: "ubuntu22"
+  runtime_version: "17"
+
 handlers:
 - url: /.*
- static_files: appdemo/index.html
- upload:  appdemo/index.html
+  static_files: appdemo/index.html
+  upload: appdemo/index.html
 
- - url: /(.*)
- static_files: appdemo/\1
- upload:  appdemo/(.*)
+- url: /(.*)
+  static_files: appdemo/\1
+  upload: appdemo/(.*)
