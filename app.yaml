@@ -1,15 +1,9 @@
-runtime: java11
-entrypoint: 'java -cp * index.class'
-api_version: 1
-threadsafe: true
-instance_class: F2
-runtime_config:
-  operating_system: "ubuntu22"
-  runtime_version: "17"
+runtime: java11 # Vẫn sử dụng Java runtime engine
+entrypoint: 'java -cp * index.class' # Không thay đổi, vì bạn vẫn sử dụng Java runtime
 
 handlers:
-- url: /.*
-  static_files: appdemo/index.html
+- url: /.* # Mặc định xử lý tất cả các yêu cầu
+  static_files: appdemo/index.html # Thay đổi để trỏ đến tệp HTML
   upload: appdemo/index.html
 
 - url: /(.*)
